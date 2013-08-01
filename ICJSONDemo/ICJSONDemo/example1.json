@@ -1,0 +1,49 @@
+{
+    "client": "ICJSONDemo",
+    "people": [
+                {
+                "id": 1,
+                "firstName": "John",
+                "lastName": "Smith",
+                "age": 25,
+                "address": {
+                    "streetAddress": "21 2nd Street",
+                    "city": "New York",
+                    "state": "NY",
+                    "postalCode": 10021
+                },
+                "phoneNumbers": [
+                                 {
+                                 "type": "home",
+                                 "number": "212 555-1234"
+                                 },
+                                 {
+                                 "type": "fax",
+                                 "number": "646 555-4567"
+                                 }
+                                 ]
+                },
+                {
+                "id": 2,
+                "firstName": "Toly",
+                "lastName": "Pochkin",
+                "age": 35,
+                "address": {
+                    "streetAddress": "123 1st Street",
+                    "city": "Seattle",
+                    "state": "WA",
+                    "postalCode": 98119
+                },
+                "phoneNumbers": [
+                                 {
+                                 "type": "home",
+                                 "number": "213 111-2222"
+                                 },
+                                 {
+                                 "type": "fax",
+                                 "number": "213 222-1111"
+                                 }
+                                 ]
+                }
+                ]
+}
