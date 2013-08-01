@@ -31,8 +31,9 @@ So here is a very simple example. Let's assume that we have example1.json file i
                                  "type": "fax",
                                  "number": "646 555-4567"
                                  }
-                                 ]
+                                ]
                 },
+
                 {
                 "id": 2,
                 "firstName": "Toly",
@@ -53,9 +54,9 @@ So here is a very simple example. Let's assume that we have example1.json file i
                                  "type": "fax",
                                  "number": "213 222-1111"
                                  }
-                                 ]
+                                ]
                 }
-                ]
+              ]
 }
 ```
 
