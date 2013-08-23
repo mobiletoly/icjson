@@ -52,9 +52,9 @@
 @interface ICJSON : NSObject
 
 /// Deserialize JSON data and create Objective-C object.
-+ (id)fromJSON:(NSData*)data rules:(NSArray*/*<ICJSON>*/)transformRules error:(NSError**)error;
++ (id)fromJSON:(NSData*)data rules:(NSArray* /*of<ICJSON>*/)transformRules error:(NSError**)error;
 
 /// Not implemented yet.
-+ (NSString*)toJSON:(id)object rules:(NSArray*/*<ICJSON>*/)transformRules error:(NSError**)error;
++ (NSString*)toJSON:(id)object rules:(NSArray* /*of<ICJSON>*/)transformRules error:(NSError**)error;
 
 @end
