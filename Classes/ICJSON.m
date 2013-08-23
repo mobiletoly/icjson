@@ -87,7 +87,7 @@
 + (NSDictionary*)rulesDictionaryFromRulesArray:(NSArray*)rules
 {
     NSMutableDictionary* const dict = [NSMutableDictionary dictionaryWithCapacity:rules.count];
-    for (ICJSONRule* rule in rules) {
+    for (ICJSONRule* const rule in rules) {
         NSString* const path = rule.path;
         ICJSONRule* const existingRule = dict[path];
         if (existingRule == nil) {
@@ -213,9 +213,7 @@ static const char* getPropertyType(objc_property_t property) {
     if (rule != nil && rule.property != nil) {
         return NSStringFromSelector(rule.property);
     }
-    else {
-        return key;
-    }
+    return key;
 }
 
 /// ------------------------------------------------------------------------------------------------------------------
@@ -268,9 +266,6 @@ static const char* getPropertyType(objc_property_t property) {
         }
     }
     return rootObject;
-
-    assert(NO);
-    return nil;
 }
 
 
