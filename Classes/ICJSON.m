@@ -114,7 +114,7 @@
 @implementation ICJSON
 
 /// ------------------------------------------------------------------------------------------------------------------
-+ (id)fromJSON:(NSData*)data rules:(NSArray*)transformRules error:(NSError**)error
++ (id)fromJSON:(NSData*)data rules:(NSArray* /*of<ICJSONRule>*/)transformRules error:(NSError**)error
 {
     NSDictionary* const rulesDict = [ICJSONRule rulesDictionaryFromRulesArray:transformRules];
     id rootObject;
@@ -155,7 +155,7 @@
 }
 
 /// ------------------------------------------------------------------------------------------------------------------
-+ (NSString*)toJSON:(id)object rules:(NSArray*/*<ICJSON>*/)transformRules error:(NSError**)error
++ (NSString*)toJSON:(id)object rules:(NSArray* /*of<ICJSONRule>*/)transformRules error:(NSError**)error
 {
     NSMutableString* const buffer = [NSMutableString stringWithCapacity:1024];
     [ICJSON appendJSONObject:object toBuffer:buffer];
