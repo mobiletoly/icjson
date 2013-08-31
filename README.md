@@ -71,7 +71,7 @@ Let's define a simple model
 
 /// Example model.
 @interface ICExample : NSObject
-@property (nonatomic) NSArray*/*<ICPerson*/ people;
+@property (nonatomic) NSArray* /*ICPerson*/ people;
 @property (nonatomic) NSString* client;
 @end
 
@@ -83,7 +83,7 @@ Let's define a simple model
 @property (nonatomic) NSString* lastName;
 @property (nonatomic) NSNumber* age;
 @property (nonatomic) ICAddress* address;
-@property (nonatomic) NSArray*/*<ICPhoneNumber*/ phoneNumbers;
+@property (nonatomic) NSArray* /*ICPhoneNumber*/ phoneNumbers;
 @end
 
 /// Person's address
@@ -127,7 +127,7 @@ Let's read JSON file and convert it into hierarchy of objects:
 
 ```
     NSError* error;
-    NSData* data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"example1" ofType:@"json"] options:0 error:&error];
+    NSData* const data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"example1" ofType:@"json"] options:0 error:&error];
     if (data == nil) {
         NSLog(@"ERROR READING FILE - %@", error);
     }
@@ -152,7 +152,7 @@ Let's read JSON file and convert it into hierarchy of objects:
                   [ICJSONRule bindObjectClass:[ICPhoneNumber class]    toPath:@"/people/phoneNumbers"],
                 ];
         error = nil;
-        ICExample* example1 = [ICJSON fromJSON:data rules:rules error:&error];
+        ICExample* const example1 = [ICJSON fromJSON:data rules:rules error:&error];
         if (example1 == nil) {
             NSLog(@"ERROR PARSING JSON - %@", error);
         }
@@ -170,7 +170,7 @@ Let's read JSON file and convert it into hierarchy of objects:
                 }
                 NSArray* const phoneNumbers = person.phoneNumbers;
                 if (phoneNumbers != nil) {
-                    for (ICPhoneNumber* phoneNumber in phoneNumbers) {
+                    for (ICPhoneNumber* const phoneNumber in phoneNumbers) {
                         NSLog(@"Phone (%@): %@", phoneNumber.type, phoneNumber.number);
                     }
                 }
@@ -178,7 +178,7 @@ Let's read JSON file and convert it into hierarchy of objects:
             }
             
             error = nil;
-            NSData* outputData = [ICJSON toJSON:example1 rules:rules error:&error];
+            NSData* const outputData = [ICJSON toJSON:example1 rules:rules error:&error];
         }
     }
 ```
