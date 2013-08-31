@@ -12,7 +12,7 @@
 
 /// Example model.
 @interface ICExample : NSObject
-@property (nonatomic) NSArray*/*<ICPerson*/ people;
+@property (nonatomic) NSArray* /*of<ICPerson*/ people;
 @property (nonatomic) NSString* client;
 @end
 
@@ -24,7 +24,7 @@
 @property (nonatomic) NSString* lastName;
 @property (nonatomic) NSNumber* age;
 @property (nonatomic) ICAddress* address;
-@property (nonatomic) NSArray*/*<ICPhoneNumber*/ phoneNumbers;
+@property (nonatomic) NSArray* /*of<ICPhoneNumber*/ phoneNumbers;
 @end
 
 /// Person's address
